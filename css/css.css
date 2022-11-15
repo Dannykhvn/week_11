@@ -1,9 +1,9 @@
-.circleList{
-    list-style-type:circle;
+.circleList {
+  list-style-type: circle;
 }
-.sqaureList{
-    list-style-type:square;
+.squareList {
+  list-style-type: square;
 }
-.greenText{
-    color:green;
+.greenText {
+  color: green;
 }
