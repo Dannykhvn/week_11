@@ -19,7 +19,7 @@ function populateList (list){
         const listItemElement = document.createElement("li");
         listItemElement.textContent = list[i];
         unorderedlistelement.append(listItemElement);
-        
+        // unorderedlistelement.style.color = "green";
     }
     
 }
@@ -31,7 +31,7 @@ populateList(shoppinglist);
 function changeListStyle(){
     unorderedlistelement.classList.add("squareList");
     unorderedlistelement.classList.remove("circleList");
-    // unorderedlistelement.classList.replace("circleList","squareList"); //can use add or remove as well
+    // unorderedlistelement.classList.replace("circleList","squareList");
     
 }
 changeListStyle();
@@ -42,5 +42,20 @@ function updateImage(){
     imageElement.src = "https://cdn-icons-png.flaticon.com/512/263/263142.png";
     imageElement.height = 100;
     imageElement.width = 100;
-    imageElement.alt = "shopping cart icon"
+    imageElement.alt = "shopping cart icon";
 }
+
+updateImage();
+
+function findGreen(){
+    const listItems = document.querySelectorAll(".shopping li")
+    for (let i = 0 ; i < listItems.length; i++){
+        console.log(listItems[i])
+    
+    if (listItems[i].textContent.includes("green")){
+        listItems[i].classList.add("greenText");
+    }
+}
+}
+
+findGreen();
