@@ -19,12 +19,28 @@ function populateList (list){
         const listItemElement = document.createElement("li");
         listItemElement.textContent = list[i];
         unorderedlistelement.append(listItemElement);
+        
     }
-
+    
 }
 
 let shoppinglist = ["cheese","bread","green pepper"];
+populateList(shoppinglist);
 
-populateList(shoppinglist,prompt());
 
+function changeListStyle(){
+    unorderedlistelement.classList.add("squareList");
+    unorderedlistelement.classList.remove("circleList");
+    // unorderedlistelement.classList.replace("circleList","squareList"); //can use add or remove as well
+    
+}
+changeListStyle();
 
+function updateImage(){
+    const imageElement = document.querySelector("#shoppingcart");
+    console.log(imageElement);
+    imageElement.src = "https://cdn-icons-png.flaticon.com/512/263/263142.png";
+    imageElement.height = 100;
+    imageElement.width = 100;
+    imageElement.alt = "shopping cart icon"
+}
